@@ -22,10 +22,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Récupération du code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Installation de Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: npm
@@ -38,10 +38,6 @@ jobs:
 
       - name: Configuration de Pages
         uses: actions/configure-pages@v5
-        with:
-          # Active automatiquement GitHub Pages sur le depot s'il ne l'est pas
-          # deja (fonctionne pour un depot public, ou prive avec un forfait payant).
-          enablement: true
 
       - name: Envoi de l'artefact
         uses: actions/upload-pages-artifact@v3
