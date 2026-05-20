@@ -38,6 +38,10 @@ jobs:
 
       - name: Configuration de Pages
         uses: actions/configure-pages@v5
+        with:
+          # Active automatiquement GitHub Pages sur le depot s'il ne l'est pas
+          # deja (fonctionne pour un depot public, ou prive avec un forfait payant).
+          enablement: true
 
       - name: Envoi de l'artefact
         uses: actions/upload-pages-artifact@v3
